@@ -1,20 +1,15 @@
 <template>
   <NavBar />
-  <Header />
-  <PhotoGrid />
+  <router-view />
 </template>
 
 <script>
-import Header from './components/Header.vue';
 import NavBar from './components/NavBar.vue';
-import PhotoGrid from './components/PhotoGrid';
 
 export default {
   name: 'App',
   components: {
-    Header,
     NavBar,
-    PhotoGrid
   }
 }
 </script>

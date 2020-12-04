@@ -14,17 +14,15 @@
   export default {
     name: 'SearchBar',
     methods: {
-      searchNow(event) {
-        const textbox = event.target;
-        this.searchValue = textbox.value;
+      searchPhoto(event) {
+        const input = event.target;
+        this.searchValue = input.value;
 
-        if (!this.searchValue) {
-          return;
-        }
+        if (!this.searchValue) return;
 
-        this.$router.push("/s/" + this.searchValue);
+        this.$router.push("/search/" + this.searchValue);
 
-        textbox.value = "";
+        input.value = "";
         this.searchValue = "";
       }
     }

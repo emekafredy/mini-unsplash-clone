@@ -3,14 +3,14 @@
     <div class="photo-card__container">
       <div
         class="photo-card__frame"
-        v-for="(item, index) in items"
+        v-for="(photo, index) in photos"
         :key="index"
       >
         <div>
           <img
             class=""
-            :src="item.urls.regular"
-            :alt="item.alt_description"
+            :src="photo.urls.regular"
+            :alt="photo.alt_description"
           />
         </div>
       </div>
@@ -22,7 +22,10 @@
   export default {
     name: 'PhotoGrid',
     props: {
-      items: []
+      photos: {
+        type: Array,
+        required: false
+      }
     }
   }
 </script>
